@@ -18,3 +18,8 @@ for(var i=0; i<lis.length; i++){
 
 	});
 }
+
+var table = document.querySelectorAll("table");
+var tr = document.querySelectorAll("tr")
+
+totalEventsMDN = tr.length - table.length;
