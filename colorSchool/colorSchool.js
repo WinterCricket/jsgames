@@ -7,12 +7,12 @@ var colors = [
 "rgb(0, 255,255)",
 ];
 var squares = document.querySelectorAll(".square");
-var targetColor = targerColor();
+var targetedColor = targetColor();
 
 var rgbDisplay = document.querySelector("#rgbDisplay");
 var messageDisplay = document.querySelector("#message");
 
-rgbDisplay.textContent = targetColor;
+rgbDisplay.textContent = targetedColor;
 
 for(var i = 0; i < squares.length; i++){
 	
@@ -23,7 +23,7 @@ for(var i = 0; i < squares.length; i++){
 		var clickedColor = this.style.background;
 		console.log(clickedColor +" " + " " +targetColor);
 		//compare color to target color
-		if(clickedColor === targetColor){
+		if(clickedColor === targetedColor){
 			this.style.background
 			messageDisplay.textContent = "CORRECT! You Win!";
 			turnColors(clickedColor);
