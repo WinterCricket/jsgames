@@ -13,11 +13,22 @@ var hardBtn = document.querySelector("#hardBtn");
 easyBtn.addEventListener("click", function(){
 	hardBtn.classList.remove("selected");
 	easyBtn.classList.add("selected");
+	colors = generateRandomColors(3);
+	targetedColor = targetColor();
+	rgbDisplay.textContent = targetedColor;
+	for(var i = 0; i < squares.length; i++){
+		if(colors[i]){
+			squares[i].style.background = colors[i];
+		}
+	}
 });
 
 hardBtn.addEventListener("click", function(){
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.add("selected");
+	colors = generateRandomColors(6);
+	targetedColor = targetColor();
+	rgbDisplay.textContent = targetedColor;
 });
 
 resetButton.addEventListener("click", function(){
